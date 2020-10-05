@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
         //webView.loadUrl("file:///android_asset/mobile_app.html");
 
         //webView.loadUrl("http://guillaumebiton.github.io/HackerNews7");
-        webView.loadUrl("http://itman.online/topcfd/mobile_app1");
+        //webView.loadUrl("http://itman.online/topcfd/mobile_app1");
+        webView.loadUrl("http://s33.test.techspire.com.au/mobile_app");
 
         WebSettings settings = webView.getSettings();
         settings.setAllowFileAccessFromFileURLs(true);

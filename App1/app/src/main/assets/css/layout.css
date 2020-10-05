@@ -1,0 +1,13 @@
+.inline {
+	display: inline;
+}
+.block {
+	display: block;
+}
+.none{
+	display: none;
+}
+textarea.normal{
+	width:200px;
+	height:21px;
+}

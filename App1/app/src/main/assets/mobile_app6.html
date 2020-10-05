@@ -1,0 +1,1972 @@
+
+<!DOCTYPE html><HTML style="border:"><HEAD><script src='js/function.js'></script><link rel='stylesheet' href='css/font-awesome.min.css'/><link rel='stylesheet' href='css/custom.css'/><link rel='stylesheet' href='css/icon.css'/><link rel='stylesheet' href='css/layout.css'/><link rel='stylesheet' href='css/w3.css'/><link rel='stylesheet' href='css/main.css'/><link rel='stylesheet' href='css/swiper.css'/><title>Mobile App Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no, maximum-scale=1.0"></HEAD><BODY style="display: none;"><div class="" style="border:"><div class="" style="border:"><div data-file="page/inc/wait_modal.php" data-tag="php"><div class="w3-padding-16 w3-container"><div id="wait_modal" class="w3-modal" style="display: none;">
+	<div class="w3-modal-content">
+		Please Wait...
+	</div>
+</div><div id="alert_modal" class="w3-modal" style="display: none;">
+  <div class="w3-container w3-modal-content">
+      <span onclick="document.getElementById('alert_modal').style.display='none';" class="w3-closebtn">×</span>
+      <h3 style="display:inline-block;"></h3><div></div>
+      <br>
+	  <div id="alert_modal_content"></div>
+    </div>
+</div><script class="">
+function wait(max_time){
+    id('wait_modal').style.display = 'block';
+    if(typeof(max_time)!='undefined'){
+        setTimeout(function(){
+            if(id('wait_modal').style.display == 'block'){
+                unwait();  
+                alert_modal('Request Timeout');
+            }
+        },max_time);
+    }
+}
+
+function unwait(){
+    id('wait_modal').style.display = 'none';
+}
+
+function alert_modal(string){
+    id('alert_modal').style.display = 'block';
+    id('alert_modal_content').innerHTML = string;
+}</script></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:"><div class="" style="min-width:25px;border:" id=""><div class="" style="min-width:25px;border:" id="facebook_login_prefix"></div><div class="" style="border:" id="fb_login_wrapper"></div></div><script class="" type="text/javascript">var connectivity = false;
+
+var scenes = [];
+var subpages = [];
+var currentScene = null;
+var prev_scenes = [];
+
+var server = 'http://itman.online/topcfd';</script></div><div class="" id="mapp_loading_page" style="border:"><div data-file="page/inc/mapp_loading_page.php" data-tag="php"><div class="w3-display-container" style="min-height: 100px; height: 100vh;" id="body"><img class="w3-display-middle" src="src/img/logo.jpg" min-height:="" border:="" style="width:200px;border:"><script class="" type="text/javascript"></script></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:" id="mapp_home_page"><div data-file="page/inc/mapp_home_page.php" data-tag="php"><div class="" style="border:"><style class="" type="text/css"></style><div class="" style="height:100vh">
+<div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="background-image:url(src/img/100x100-share-w.png);"></div>
+                <div class="icon-50x50 right" style="background-image:url(src/img/100x100-search-w.png);"></div>
+            </div>
+            
+        </div>
+        <content style="border:">
+            <div class="first nav-section shadow">
+                <div class="slider">
+                    <div class="slides">            
+                        <div class="slide" style="border:;background-image:url(&quot;src/img/logo.jpg&quot;)"></div>
+                        <div class="slide d-n" style="background-image:url(src/img/logo.jpg)"></div>
+                        <div class="slide d-n" style="background-image:url(src/img/logo.jpg)"></div>
+                        <div class="slide d-n" style="background-image:url(src/img/logo.jpg)"></div>
+                    </div>
+                </div>
+                <div class="navs" style="border:">
+                    <li class="nav active" style="border:"> 
+                        <img class="icon-flex" src="src/img/nav01.png" style="border:">
+                        <div class="text" style="border:">Catalogues</div>
+                    </li>
+                    <li class="nav" style="border:">
+                        <img class="icon-flex" src="src/img/nav02.png">
+                        <div class="text">Latest</div>
+                    </li>
+                    <li class="nav" style="border:">
+                        <img class="icon-flex" src="src/img/nav03.png">
+                        <div class="text">Missions</div>
+                    </li>
+                    <li class="nav" style="border:">
+                        <img class="icon-flex" src="src/img/nav04.png">
+                        <div class="text" style="border:">Invites</div>
+                    </li>
+                </div>
+            </div>            
+            <div class="section winners shadow" style="border:">
+                <div class="icon icon-25x25" style="border:;background-image:url(&quot;src/img/100x100-volume-f44336.png&quot;)"></div>
+                <div class="boardcast" style="border:">
+                    <li class="winner" style="border:">
+                        <div class="name" style="border:">hz*126.com</div>
+                        <div class="text" style="border:">Won</div>
+                        <div class="product" style="border:">PSV 2000 Wifi Consolea a a a a a a aa a a a a a </div>
+                    </li>
+                    <li class="winner d-n">
+                        <div class="name" style="border:">hz*126.com</div>
+                        <div class="text" style="border:">Won</div>
+                        <div class="product">PSV 2000 Wifi Console</div>
+                    </li>
+                    <li class="winner d-n">
+                        <div class="name">hz*126.com</div>
+                        <div class="text" style="border:">Won</div>
+                        <div class="product">PSV 2000 Wifi Console</div>
+                    </li>
+                </div>
+            </div>
+            <div class="section last shadow" style="border:">
+                <div class="title mark" style="border:">
+                    <div class="text" style="border:">Latest Results</div>
+                </div>
+                <div class="content round shadow">
+                    <div class="product">
+                        <div class="image" style="border:;background-image:url(&quot;src/img/product/psv.jpg&quot;)"></div>
+                        <div class="text" style="border:">Winner</div>
+                        <div class="winner" style="border:">hz*126.com</div>
+                    </div>
+                    <div class="product">
+                        <div class="image" style="border:;background-image:url(&quot;src/img/product/psv.jpg&quot;)"></div>
+                        <div class="text" style="border:">Winner</div>
+                        <div class="winner" style="border:">hz*126.com</div>
+                    </div>
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="text">Winner</div>
+                        <div class="winner">hz*126.com</div>
+                    </div>
+                </div>
+            </div>
+            <div class="section popular shadow">
+                <div class="title mark">
+                    <div class="text">Popularity</div>
+                </div>
+                <div class="content">
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>                      
+                </div>
+            </div>
+            <div class="section new shadow">
+                <div class="title mark">
+                    <div class="text">New Arrivals</div>
+                </div>
+                <div class="content">
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image: url(&quot;src/img/product/psv.jpg&quot;);"></div>
+                        <div class="name" style="border:">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                    <div class="product">
+                        <div class="image" style="background-image:url(src/img/product/psv.jpg)"></div>
+                        <div class="name">PSV 2000 Wifi Console</div>
+                        <div class="price">200</div>
+                        <div class="process">
+                            <div class="denominator">
+                                <div class="numerator" style="width:30%;"></div>
+                            </div>
+                            <div class="label">60</div>                            
+                        </div>
+                    </div>  
+                </div>
+            </div>
+            <div class="last section share shadow n-d" style="border:">
+                <div class="title mark">
+                    <div class="text" style="border:">Sharing Order</div>
+                </div>
+            </div>
+        </content>
+</div><div class="" style=""></div><script class="" type="text/javascript"></script></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:" id="mapp_login_page"><div data-file="page/inc/mapp_login_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+         <style class="" type="text/css">@charset "utf-8";
+
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}
+</style><div class="fix-module">
+            
+        </div>
+        <content style="border:">
+            <div class="login-section first" style="border:">
+                <div class="bkimg" style="border:;background-image:url(&quot;src/img/logo2.png&quot;)"></div>
+                
+                <li class="user round" style=""><input type="text" placeholder="Email" id="account_name" style="border:"></li><li class="pw round" style="border:"><input type="password" placeholder="Password" style="border:" id="password"></li>
+                <li class="login round" style="border:" id="login_btn"><div class="bt_login" style="border:">Login</div></li>
+                <li class="user round" style="border:"><input class="w3-button" value="Email" type="button" id="email_btn" style="border:"><input class="w3-button" value="Mobile" type="button" id="mobile_btn" style="border:"><input class="w3-button" value="Facebook" type="button" id="facebook_btn" style="border:"><input class="w3-button" value="WeChat" type="button" id="wechat_btn" style="border:"></li><div>
+                    <div class="forget left" style="border:">forget your password?</div>
+                    <div class="reg right" id="register_link_btn" style="border:">Register a new account.</div>
+                </div>
+            <div class="w3-left w3-container w3-light-grey" style="min-width: 25px; min-height: 25px;"></div></div>
+        </content>
+
+<script class="" type="text/javascript">var login_mode = 'email';
+id('login_btn').a = id('account_name');
+id('login_btn').b = id('password');
+id('login_btn').onclick=function(e){
+    var account = id('login_btn').a.value;
+    var password = id('login_btn').b.value;
+    
+    connectivity = app.check_connection();//alert_modal(connectivity );
+    if(!connectivity){
+                alert_modal('No connection, please Check your Network');
+                return;
+    }
+    wait(40000);
+    
+    call('user','login',{
+        account:account,
+        password:password,
+        login_mode:login_mode,
+        callback:'login_cb'
+    },server);
+    
+}
+
+function login_cb(o){
+    unwait(); 
+    if(o.data.message=='successful'){
+        if(typeof(app)!='undefined'){
+            app.write('user',JSON.stringify({account:o.args.account,password:o.args.password,login_mode:o.args.login_mode}));
+        }
+        goto_scene('mapp_user_page');
+        show_scene('mapp_footer_nav');
+    }else{
+        alert_modal(o.data.message);
+    }
+}
+
+
+id('email_btn').onclick=function(e){
+    id('account_name').placeholder = 'Email';
+    login_mode = 'email';
+}
+
+id('mobile_btn').onclick=function(e){
+    id('account_name').placeholder = 'Mobile';
+    login_mode = 'mobile';
+}
+
+id('facebook_btn').onclick=function(e){
+    alert_modal('goto facebook and login');
+}
+
+id('wechat_btn').onclick=function(e){
+    id('account_name').placeholder = 'Wechat Account';
+    login_mode = 'wechat';
+}
+
+function reset_login(){
+    id('account_name').value = '';
+    id('account_name').placeholder = 'Email';
+    id('password').value = '';
+    login_modal = 'email';
+}
+
+id('register_link_btn').onclick=function(e){
+    goto_scene('mapp_register_page');
+    reset_register();
+}</script></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:" id="mapp_product_list_page"><div data-file="page/inc/mapp_product_list_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+<style class="" type="text/css">
+/*header and footer:navigation panel*/
+.cfd_bar_h{position:fixed;left:0;top:0;width:100%;height:auto;color:white;background:#f44336;height:30px;padding:10px 0;z-index:100;}
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}</style><div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="background-image:url(src/img/100x100-back-w.png);"></div>
+                <div class="icon-50x50 right" style="background-image:url(src/img/100x100-search-w.png);"></div>
+            </div>
+            
+        </div>
+        <content>
+            <div class="first section products">
+                <div class="navs">
+                    <li class="active"><div>Upcoming</div></li>
+                    <li><div>Popular</div></li>
+                    <li><div>Newest</div></li>
+                    <li><div>Price</div></li>
+                    <li>
+                        <div class="drp dropdown-trigger">Category</div>
+                        <div class="dropdown-content d-n"></div>
+                    </li>
+                </div>
+                <div class="content">
+                    <div class="product" style="background-image:url(src/img/product/hd.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd" style="border:">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <!--test data-->
+                   <div class="product" style="border:;background-image:url(&quot;src/img/product/psv.jpg&quot;)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image: url(&quot;src/img/product/psv.jpg&quot;);">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image:url(src/img/product/psv.jpg)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="border:;background-image:url(&quot;src/img/product/psv.jpg&quot;)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="border:;background-image:url(&quot;src/img/product/psv.jpg&quot;)">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    <div class="product" style="background-image: url(&quot;src/img/product/psv.jpg&quot;);">
+                        <div class="title">
+                            (the 1 draw) Kaspersky Internet Security for Android
+                        </div>
+                        <div class="content">
+                            <div class="process">
+                                <div class="denominator">
+                                    <div class="numerator" style="width:10%;"></div>
+                                </div>
+                                <div class="label">
+                                    <div class="jnd">10</div>
+                                    <div class="ttl">29</div>
+                                    <div class="lft" style="border:">19</div>
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="btn round" style="background-image:url(src/img/100x100-cart-w.png);"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </content>
+  
+<div class="" style="border:"></div></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:" id="mapp_user_page"><div data-file="page/inc/mapp_user_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+<style class="" type="text/css"></style><div class="fix-module">
+            
+            
+        </div>
+        <content>
+            <div class="first section user">
+                <div class="title" style="border:">
+                    <div class="img" style="background-image: url(src/img/member.jpg)"></div>
+                    <div class="nav">
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/history.png);"></div>
+                            <div class="text">Purchase History</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/favor.png);"></div>
+                            <div class="text">Post draw</div>
+                        </li>
+                        <li style="border:">
+                            <div class="icon-50x50" style="background-image:url(src/img/list.png);"></div>
+                            <div class="text">Winning List</div>
+                        </li>
+                    </div>
+                </div>
+                <div class="content">
+                        <li style="border:">
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/1.png);"></div>
+                            <div class="text" style="border:">Task Centre</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/2.png);"></div>
+                            <div class="text" style="border:">Wheel Surf</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/3.png);"></div>
+                            <div class="text">Share Order</div>
+                        </li>
+                        <li style="border:">
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/4.png);"></div>
+                            <div class="text" style="border:">Invite Friends</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/5.png);"></div>
+                            <div class="text" style="border:">Post Address</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/6.png);"></div>
+                            <div class="text">Change Password</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/7.png);"></div>
+                            <div class="text">Account Detail</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/8.png);"></div>
+                            <div class="text">10 Dollar</div>
+                        </li>
+                        <li>
+                            <div class="icon-50x50" style="background-image:url(src/img/icon/9.png);"></div>
+                            <div class="text">Direct Purchase</div>
+                        </li>
+                </div>
+            </div>
+        </content>
+  
+<script class="" type="text/javascript"></script></div></div><script class="" type="text/javascript"></script></div><div class="" style="border:" id="mapp_register_page"><div data-file="page/inc/mapp_register_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+
+<style class="" type="text/css">
+/*header and footer:navigation panel*/
+.cfd_bar_h{position:fixed;left:0;top:0;width:100%;height:auto;color:white;background:#f44336;height:30px;padding:10px 0;z-index:100;}
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}</style><div class="fix-module">
+            
+        </div>
+        <content>
+            <div class="login-section first" style="border:">
+                <div class="bkimg" style="border:;background-image:url(&quot;src/img/logo2.png&quot;)"></div>
+                <li class="user round" style="border:"><input type="button" style="border:" value="Use Mobile" id="email_mobile_switch_btn"></li>
+                <li class="user round" style="border:"><input type="text" placeholder="Email" style="border:" id="email_mobile"></li><li class="user round" style="border:"><input type="text" placeholder="Your Name" id="user_name" style="border:"></li><li class="pw round" style="border:"><input type="password" placeholder="Password" style="border:" id="password1"></li>
+                <li class="pw round" style="border:"><input type="password" placeholder="Re-type Password" style="border:" id="password2"></li>
+                <li class="login round" style="border:" id="register_btn"><div class="bt_login" style="border:">Register</div></li>               
+            </div>
+        </content>
+
+
+<script class="" type="text/javascript">var register_mode = 'email';
+id('email_mobile_switch_btn').onclick=function(e){
+    if(id('email_mobile_switch_btn').value=='Use Mobile'){
+        id('email_mobile_switch_btn').value='Use Email'
+        id('email_mobile').placeholder = 'Mobile';
+        id('email_mobile').value = '';
+        register_mode = 'mobile';
+    }else if(id('email_mobile_switch_btn').value=='Use Email'){
+        id('email_mobile_switch_btn').value='Use Mobile';
+        id('email_mobile').placeholder = 'Email';
+        id('email_mobile').value = '';
+        register_mode = 'email';
+    }
+    
+};
+
+function reset_register(){
+    id('email_mobile_switch_btn').value='Use Mobile';
+        id('email_mobile').placeholder = 'Email';
+        id('email_mobile').value = '';
+        register_mode = 'email';
+}
+
+id('register_btn').onclick=function(e){
+    var account = id('email_mobile').value;
+    
+    if(id('password1').value!=id('password2').value){
+        alert_modal('Password Inconsistent! Please check again.');
+        return ;
+    }
+  
+    connectivity = app.check_connection();
+    if(!connectivity){
+                alert_modal('No connection, please Check your Network');
+                return ;
+    }
+    
+    wait(40000);
+    call('user','register',{
+        account: account,
+        register_mode: register_mode,
+        password:id('password1').value,
+        name: id('user_name').value,
+        callback:'register_cb'
+    },server);
+    
+}
+function register_cb(o){
+    unwait();
+    if(o.args.register_mode=='email'){
+        goto_scene('mapp_register_successful_page');
+    }else if(o.args.register_mode=='mobile'){
+        if(o.data.message=='failed'){
+            alert_modal("This mobile number has already been used, Please use another phone to register");
+        }else{
+             goto_scene('mapp_register_mobile_verification_page');
+            id('mobile_number').value = o.args.account;
+        }
+    }
+}</script></div></div><script class="" type="text/javascript"></script></div><div class="" id="mapp_register_mobile_verification_page" style="border:"><div data-file="page/inc/mapp_register_mobile_verification_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+
+<style class="" type="text/css">
+/*header and footer:navigation panel*/
+.cfd_bar_h{position:fixed;left:0;top:0;width:100%;height:auto;color:white;background:#f44336;height:30px;padding:10px 0;z-index:100;}
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}</style><div class="fix-module">
+            
+        </div>
+        <content>
+            <div class="login-section first">
+                <div class="bkimg" style="border:;background-image:url(&quot;src/img/logo2.png&quot;)"></div>
+                
+                <li class="user round" style="border:"><input type="text" placeholder="Mobile Number" style="border:" id="mobile_number" disabled="true"></li><li class="user round" style="border:"><input type="text" placeholder="SMS Code" id="sms_code" style="border:"></li>
+                
+                <li class="user round" style="border:"><input type="button" style="border:" id="send_again_btn" value="Send Again"></li><li class="login round" style="border:" id="mobile_verification_btn"><div class="bt_login" style="border:">Verify</div></li>               
+            </div>
+        </content>
+
+
+<script class="" type="text/javascript">
+function reset_mobile_verification(){
+    id('sms_code').value = '';
+}
+
+id('mobile_verification_btn').onclick=function(e){
+    var sms_code = id('sms_code').value;
+    
+    call('user','verify_registration',{
+        code: sms_code,
+        account: id('mobile_number').value,
+        verify_mode:'mobile',
+        callback:'mobile_verify_cb'
+    },'http://itman.online/topcfd');
+}
+function mobile_verify_cb(o){
+    //alert_modal(o.data.message);
+    if(o.data.message=='successful'){
+        goto_scene("mapp_register_successful_page");
+        id('registration_successful_message').value = 'You have successfully registered, Please log in';
+        goto_scene('mapp_user_page');
+    }else if(o.data.message=='failed'){
+        alert_modal('Failed');
+    }
+}
+id('send_again_btn').onclick=function(e){
+    call('user','send_sms_code_again',{
+        mobile:id('mobile_number').value,
+        callback:'send_sms_again_cb'
+    },'http://itman.online/topcfd');
+}
+function send_sms_again_cb(o){
+    //alert_modal(o.data);
+}</script></div></div><script class="" type="text/javascript"></script></div><div class="" id="mapp_register_successful_page" style="border:"><script class="" type="text/javascript"></script><div data-file="page/inc/mapp_register_successful_page.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+
+<style class="" type="text/css">
+/*header and footer:navigation panel*/
+.cfd_bar_h{position:fixed;left:0;top:0;width:100%;height:auto;color:white;background:#f44336;height:30px;padding:10px 0;z-index:100;}
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}</style><div class="fix-module">
+            
+        </div>
+        <content>
+            <div class="login-section first" style="border:">
+                <div class="bkimg" style="background-image: url(&quot;src/img/logo2.png&quot;);"></div>
+                
+                
+                
+                <li class="user round" style="border:"><input type="button" style="border:" id="" value="Thank you for registration.
+Please access your email to verify you account before logging in."></li><li class="login round" style="border:" id="post_email_registration_login_btn"><div class="bt_login" style="border:">Log in</div></li>               
+            </div>
+        </content>
+
+
+<script class="" type="text/javascript">
+
+id('post_email_registration_login_btn').onclick=function(e){
+  goto_scene('mapp_login_page');
+}
+</script></div></div></div><div class="" id="mapp_header" style="border:"><div data-file="page/inc/mapp_header.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+<div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="border:;background-image:url(&quot;src/img/100x100-back-w.png&quot;)"></div>
+                <div class="text right" style="border:" id="change_account_btn">Change Account</div>
+            <script class="" type="text/javascript">id('change_account_btn').onclick=function(e){
+    goto_scene('mapp_login_page');
+    hide_scene('mapp_footer_nav');
+    reset_login();
+}</script></div>
+            
+        </div>
+        
+  
+</div></div><script class="" type="text/javascript"></script></div><div class="" id="mapp_header1" style="border:"><script class="" type="text/javascript"></script><div data-file="page/inc/mapp_header1.php" data-tag="php"><div class="" style="border:"><div class="" style="height:100vh">
+<div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="background-image:url(src/img/100x100-share-w.png);"></div>
+                <div class="icon-50x50 right" style="background-image:url(src/img/100x100-search-w.png);"></div>
+            </div>
+            
+        </div>
+        
+</div><div class="" style=""></div></div></div></div><div class="" id="mapp_header2" style="border:"><script class="" type="text/javascript"></script><div data-file="page/inc/mapp_header2.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+         <div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="border:;background-image:url(&quot;src/img/100x100-back-w.png&quot;)" id="login_back_btn"></div>
+            <script class="" type="text/javascript">id('login_back_btn').onclick = function(e){
+    goto_scene('mapp_user_page');
+}</script></div>
+        </div>
+        
+
+</div></div></div><div class="" id="mapp_header3" style="border:"><div data-file="page/inc/mapp_header3.php" data-tag="php"><div class="" style="border:"><div class="" style="">
+<div class="fix-module">
+            <div class="cfd_bar_h">
+                <div class="icon-50x50 left" style="background-image:url(src/img/100x100-share-w.png);"></div>
+                <div class="icon-50x50 right" style="background-image:url(src/img/100x100-search-w.png);"></div>
+            </div>
+            
+        </div>
+        
+</div></div></div><script class="" type="text/javascript"></script></div><div class="" id="mapp_footer_nav" style="border:"><div data-file="page/inc/mapp_footer_nav.php" data-tag="php"><div class="w3-padding-16 w3-container" style="border:">
+
+<style class="" type="text/css">@charset "utf-8";
+
+.cfd_bar_h>.text{padding:5px 10px;font-size:20px;width:auto;height:30px;}
+.cfd_bar_f{position:fixed;left:0;bottom:0;width:100%;height:auto;z-index:100;}
+.cfd_bar_f>li{float:left;list-style: none;width:20%;height:auto;background:white;padding:10px 0;text-align: center;border-top:2px solid rgba(0,0,0,0);}
+.cfd_bar_f>li>.text{font-size:10px;}
+.cfd_bar_f>li.active{border-top:2px solid #f44336;}
+
+
+/*content: */
+/*home page*/
+content .section{margin-top:10px;background:white;padding:2px 1%;}
+
+content>.first{margin-top:50px;}
+content>.last{margin-bottom:76px;}
+content .nav-section .slider>{}
+content .nav-section .slider>.slides>{}
+content .nav-section .slider>.slides>.slide{width:100%;min-height:150px;background-color:white;background-size:90%;background-position:center;background-repeat: no-repeat;}
+content .nav-section .navs{width:100%;font-size:0px;}
+content .nav-section .navs>li{display:inline-block;list-style:none;width:20%;padding:2.5%;height:auto;background:white;font-size:12px;text-align: center;}
+content .nav-section .navs>li>.text{margin-top:5px;}
+
+.section>.title{width:100%;}
+.section>.title .text{font-size:14px;color:#f44336;margin:10px;}
+.section>.content .text{font-size:12px;color:#585858;}
+
+.section.winners{font-size:0px;height:21px;font-size:0px;}
+.section.winners>.icon{display:inline-block;float:left;width:9%}
+.section.winners>.boardcast{display:inline-block;float:left;padding:2px 0;height:21px;width:89%}
+.section.winners>.boardcast>li.winner{font-size:14px;list-style: none;float:left;margin-left:1%;width:99%;}
+.section.winners>.boardcast>li.winner>div{display:inline-block;}
+.section.winners>.boardcast>li.winner>.name{color:#585858;font-weight:bold;max-width:30%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.text{color:#f44336; max-width:20%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+.section.winners>.boardcast>li.winner>.product{color:#585858;max-width:50%;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;text-decoration: underline}
+
+.section.last{font-size:0px;}
+.section.last>.content{width:98%;margin:1%;border:1px solid #eee;padding-left:-1px;text-align: center;}
+.section.last .product{width:33%;height:auto;border-right:1px solid #eee;display:inline-block;}
+.section.last .product:nth-child(3n){border:none;}
+ 
+.section.popular{font-size:0px;}
+.section.popular>.content{width:98%;margin:1%;text-align: center;}
+.section.popular .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.popular .product:nth-child(2n){border-right:none;}
+.section.popular .product:nth-child(1){border-top:none;}
+.section.popular .product:nth-child(2){border-top:none;}
+
+.section.new{font-size:0px;}
+.section.new>.content{width:98%;margin:1%;text-align: center;}
+.section.new .product{width:49%;height:auto;border-right:1px solid #eee;border-top:1px solid #eee;display:inline-block;}
+.section.new .product:nth-child(2n){border-right:none;}
+.section.new .product:nth-child(1){border-top:none;}
+.section.new .product:nth-child(2){border-top:none;}
+
+.section>.content .product{padding:5px 0;}
+ .product>.image{width:100%;height:100px;background-position: center;background-repeat: no-repeat;background-size:auto 100%;}
+ .product>.text{text-align: center;}
+ .product>.winner{text-align:center; color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.name{text-align:center;color:#585858;font-size:12px;padding:5px 0;white-space:nowrap;overflow:hidden; text-overflow:ellipsis;}
+ .product>.price{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.price::before{content:'$';font-weight:bold;}
+ .product>.process{display:inline-block;width:100%;}
+ .product>.process>.denominator{display:inline-block;background:rgba(0,0,0,0.2);height:10px;width:80%;}
+ .product>.process>.denominator>.numerator{background:#f44336;height:100%;}
+ .product>.process>.label{text-align:center;color:#f44336;font-size:12px;padding:5px 0;}
+ .product>.process>.label::before{content:'Left:  ';color:#585858;}
+
+
+
+/*login and register*/
+.login-section{top:50%;width:90%;padding:5%;font-size:0px;}
+.login-section>.bkimg{background-size:auto 100%;background-position: center;background-repeat:no-repeat;height:150px;width:100%;}
+.login-section>li{list-style: none;margin:10px 0;background:white;height:auto;background-position: 5%;background-size:auto 80%;background-repeat:no-repeat;border:1px solid #eee}
+.login-section>li>input{width:70%;border:none;font-size:16px;margin-left:20%;padding:10px 0;}
+.login-section>li>input::-webkit-input-placeholder{color:#898989;}
+.login-section>.user{background-image:url(../img/100x100-user2-d.png);}
+.login-section>.pw{background-image:url(../img/100x100-pw-d.png);}
+.login-section>.login{padding:10px;background:#f44336;text-align: center}
+.login-section>.login>.bt_login{font-size:16px;font-weight:bold;color:white;}
+.login-section>div>.forget,.login-section>div>.reg{color:#f44336;text-decoration: underline;font-size:14px;}
+
+/*products*/
+.section.products{padding:0px;}
+/*products category division*/
+.section.products>.navs{padding:0 1%;width:98%;font-size:0;text-align: center;}
+.section.products>.navs>li{display:inline-block;width:20%;font-size:12px;border-bottom:1px solid transparent;padding:6px 0;}
+.section.products>.navs>li.active{border-bottom:1px solid #f44336;color:#f44336;}
+.section.products>.navs>li>div:not(.drp){border-right:1px solid #eee;}
+.section.products>.navs>li>div.dropdown-trigger::after{content:'▼';}
+
+/*products content division*/
+.section.products>.content>.product{background-position:left;font-size:0;background-repeat:no-repeat;background-size:25% auto;}
+.section.products>.content>.product>.title{margin-left:25%;font-size:14px;font-weight:bold;border-left:1px solid #eee;padding:5px 2%;width:71%;}
+.section.products>.content>.product>.content{margin-left:25%;display:inline-block;font-size:12px;border-left:1px solid #eee;padding:5px 2%;width:56%;}
+.section.products>.content>.product>.content>.process{display:inline-block;width:100%;}
+.section.products>.content>.product>.content>.process>.denominator{display:inline-block;width:100%;background:rgba(0,0,0,0.2);height:2px;}
+.section.products>.content>.product>.content>.process>.denominator>.numerator{background:#f44336;height:100%;}
+.section.products>.content>.product>.content>.process>.label{width:100%;font-size:0px;text-align:center;padding:5px 0;}
+.section.products>.content>.product>.content>.process>.label>.jnd{display:inline-block;width:33.33%;color:#f44336;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.jnd::before{position:absolute;content:'Joined';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.ttl{display:inline-block;width:33.33%;color:#898989;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.ttl::before{position:absolute;content:'Times';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.content>.process>.label>.lft{display:inline-block;width:33.33%;color:#2AF;font-size:12px;}
+.section.products>.content>.product>.content>.process>.label>.lft::before{position:absolute;content:'Left';color:#898989;margin-top:14px;}
+.section.products>.content>.product>.btn{display:inline-block;padding:5px 0.5%;margin:0.5%;background:#f44336;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 60%;padding:2px 2px;vertical-align: middle;}
+
+/*user personal space*/
+.section.user{padding:0px;}
+.section.user>.title{background:#f44336;padding:10px 0px;width:100%;text-align: center;}
+.section.user>.title>.img{border-radius:50%;width:100px;height:100px;display:inline-block;background-position:center;background-repeat:no-repeat;background-size:100%;}
+.section.user>.title>.nav{font-size:0px;padding:10px 0 0;}
+.section.user>.title>.nav>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;}
+.section.user>.title>.nav>li>.text{color:white;font-size:12px;}
+.section.user>.content{font-size:0px;}
+.section.user>.content>li{display:inline-block;list-style: none;width:33%;height:auto;text-align: center;border-top:1px solid #eee;padding:10px 0;}
+.section.user>.content>li>.text{color:#585858;font-size:14px;}
+.section.user>.content>li:nth-child(1),.section.user>.content>li:nth-child(2),.section.user>.content>li:nth-child(3){border:none;}
+
+
+/*utilized setting*/
+.shadow{box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+
+.mark{background-image:url(../img/100x100-right-d.png);background-size:auto 100%;background-position:right;background-repeat:no-repeat;}
+.icon-100x100{display:inline-block;height:60px;width:60px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 20px;}
+.icon-50x50{display:inline-block;height:30px;width:30px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 10px;}
+.icon-25x25{display:inline-block;height:21px;width:21px;background-position:center;background-repeat:no-repeat;background-size:auto 100%;padding:0 2px;}
+.icon-flex{display:inline-block;width:100%;height:auto;max-width:50px;}/*only used for img tag*/
+
+
+.round{border-radius: 5px;}
+.left{float:left}
+.right{float:right}
+.d-n{display:none;}
+</style><div class="cfd_bar_f" id="footer_nav">
+                <li class="nav active" style="border:" id="mapp_home_page_link">
+                    <div class="icon-50x50" style="border:;background-image:url(&quot;src/img/100x100-home-d.png&quot;)"></div>
+                    <div class="text" style="border:">Home</div>
+                </li>
+                <li class="nav" style="border:" id="mapp_product_list_page_link">
+                    <div class="icon-50x50" style="background-image:url(src/img/100x100-product2-d.png);"></div>
+                    <div class="text" style="border:">Products</div>
+                </li>
+                <li class="nav" id="mapp_result_page_link">
+                    <div class="icon-50x50" style="background-image:url(src/img/100x100-result-d.png);"></div>
+                    <div class="text" style="border:">Result</div>
+                </li>
+                <li class="nav" style="border:" id="mapp_cart_page_link">
+                    <div class="icon-50x50" style="border:;background-image:url(&quot;src/img/100x100-cart-d.png&quot;)"></div>
+                    <div class="text" style="border:">Cart</div>
+                </li>
+                <li class="nav" style="border:" id="mapp_user_page_link">
+                    <div class="icon-50x50" style="background-image:url(src/img/100x100-user-d.png);"></div>
+                    <div class="text" style="border:">Account</div>
+                </li>
+            </div>
+
+<script class="" type="text/javascript">id('mapp_home_page_link').onclick=function(e){
+    goto_scene('mapp_home_page');
+}
+id('mapp_product_list_page_link').onclick=function(e){
+    goto_scene('mapp_product_list_page');
+}
+id('mapp_result_page_link').onclick=function(e){
+    goto_scene('mapp_home_page');
+}
+id('mapp_user_page_link').onclick=function(e){
+    goto_scene('mapp_user_page');
+}
+id('mapp_cart_page_link').onclick=function(e){
+    goto_scene('mapp_home_page');
+}
+
+function highlight(page_name){
+    for(var i=0;i<id('footer_nav').children.length;i++){
+        id('footer_nav').children[i].classList.remove('active');
+    }
+    id(page_name+'_link').classList.add('active');
+}</script></div></div><script class="" type="text/javascript"></script></div><script class="" type="text/javascript">currentScene = id('mapp_loading_page');
+
+scenes.push(id('mapp_loading_page'));
+scenes.push(id('mapp_home_page'));id('mapp_home_page').subpages =[id('mapp_header3'),id('mapp_footer_nav')];
+id('mapp_home_page').initialize = function(){ highlight(this.id); }
+
+scenes.push(id('mapp_product_list_page'));id('mapp_product_list_page').subpages =[id('mapp_header3'),id('mapp_footer_nav')];
+id('mapp_product_list_page').initialize = function(){ highlight(this.id); }
+
+scenes.push(id('mapp_register_page'));id('mapp_register_page').subpages =[id('mapp_header2')];
+scenes.push(id('mapp_user_page'));id('mapp_user_page').subpages =[id('mapp_header'),id('mapp_footer_nav')];
+id('mapp_user_page').initialize = function(){ highlight(this.id); }
+
+scenes.push(id('mapp_login_page'));id('mapp_login_page').subpages =[id('mapp_header2')];
+scenes.push(id('mapp_register_successful_page'));id('mapp_register_successful_page').subpages =[id('mapp_header2')];
+scenes.push(id('mapp_register_mobile_verification_page'));id('mapp_register_mobile_verification_page').subpages =[id('mapp_header2')];
+
+subpages.push(id('mapp_header'));
+subpages.push(id('mapp_header1'));
+subpages.push(id('mapp_header2'));
+subpages.push(id('mapp_header3'));
+subpages.push(id('mapp_footer_nav'));
+
+for(var i=0;i<scenes.length;i++){
+    scenes[i].style.display = 'none';
+}
+goto_scene('mapp_loading_page');
+
+function goto_scene(scene_name){
+    if(id(scene_name)!=null){
+        if(currentScene!=null){
+            prev_scenes.push(currentScene);
+            currentScene.style.display = 'none';
+        }
+        currentScene = id(scene_name);
+        currentScene.style.display = '';
+        for(var i=0;i<subpages.length;i++){
+            subpages[i].style.display = 'none';
+        }
+        if(typeof(currentScene.subpages)!='undefined'){
+            for(var i=0;i<currentScene.subpages.length;i++){
+                currentScene.subpages[i].style.display = '';
+            }
+        }
+    }
+    if(typeof(currentScene.initialize)!='undefined'){
+        currentScene.initialize();
+    }
+}
+
+load();
+
+function load(){
+
+    setTimeout(function(){ 
+        //goto_scene('mapp_login_page');
+        //goto_scene("mapp_home_page");
+        //show_scene("mapp_footer_nav");
+    }, 3000);
+}
+
+//app.write('user','{}');
+//id('fb_login_wrapper').innerHTML = res;
+if(typeof(app)!='undefined'){
+    //app.write('user',"");
+    var res = app.read('user');
+    
+    if(res.length==0){
+        goto_scene('mapp_login_page');
+    }else{
+        if(res.charAt(0)!="{"){
+            goto_scene("mapp_login_page");
+        }else{
+            var local_info = JSON.parse(res);
+            connectivity = app.check_connection();
+            var attempt_time = 0;
+            var max_attempt_time = 60;
+            while(!connectivity){
+                connectivity = app.check_connection();
+                attempt_time ++;
+                if(attempt_time >max_attempt_time ){
+                    break;
+                }
+            }
+                wait(40000);
+                call('user','login',{
+                    account: local_info.account,
+                    password: local_info.password,
+                    login_mode: local_info.login_mode,
+                    callback:'login_cb'
+                },'http://itman.online/topcfd');
+            
+        }
+    }
+}</script></div><script id="#_display_script" type="text/javascript">display();</script></BODY></HTML>

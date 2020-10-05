@@ -1,0 +1,44 @@
+.cursor:hover {cursor:pointer;}
+.nocursor:hover{cursor:auto!important;}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.highlight-red:active{ background-color:red; }
+.gradual-color	{-webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s;}
+	.gradual-text-color	{-webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;}
+.no-outline:focus {
+    outline: none;
+}
+
+.input-like {
+	display: inline-block
+}
+.input-like:empty:not(:focus):before{
+    content:attr(data-text);
+	color:#f7f4f4;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+nav.mysidenav {
+	
+}
